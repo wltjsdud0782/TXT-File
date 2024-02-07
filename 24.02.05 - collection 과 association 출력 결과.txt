@@ -1,0 +1,52 @@
+ShopBuyVO   :    BuyDetailVO    :     ItemVO   :   ImgVO
+       1         :     N    ,    1      :        1        :    N
+            collection           association     collection
+
+shopVO.getBuyDetailList()[0].getItemVO().getImgList()[0].getAttachedFileName() > 사진 뽑기
+
+ShopBuyVO(			
+buyCode=2
+, memberId=null
+, buyPrice=42400
+, buyDate=2024-02-02 17:09:32
+, buyDetailList=[          		>> !!!!! collection 실행 !!!!!
+	BuyDetailVO(
+		buyDetailCode=0
+		, itemCode=17
+		, buyCnt=1
+		, totalPrice=26000
+		, buyCode=2
+		, itemVO=ItemVO( 			>> !!!!! association 실행 !!!!!
+			itemCode=17
+			, itemName=가장 빨리 만나는 코어 자바9
+			, itemPrice=0
+			, itemStock=0
+			, itemIntro=null
+			, regDate=null
+			, cateCode=0
+			, imgList=[ 			>> !!!!! collection 실행 !!!!!
+				ImgVO(imgCode=0
+				, originFileName=null
+				, attachedFileName=b8b00e3c-6740-440e-aa0b-732975a4abc6.jpg
+				, isMain=null
+				, itemCode=17)]))
+	, BuyDetailVO(
+		buyDetailCode=0
+		, itemCode=16
+		, buyCnt=1
+		, totalPrice=16400
+		, buyCode=2
+		, itemVO=ItemVO(
+			itemCode=16
+			, itemName=Java EE 디자인 패턴
+			, itemPrice=0
+			, itemStock=0
+			, itemIntro=null
+			, regDate=null
+			, cateCode=0
+			, imgList=[
+				ImgVO(imgCode=0
+				, originFileName=null
+				, attachedFileName=62e4dd2f-6021-4aac-b3d9-9f001d09ac67.jpg
+				, isMain=null
+				, itemCode=16)]))])

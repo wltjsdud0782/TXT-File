@@ -1,0 +1,5 @@
+DELETE FROM SHOP_CART
+        WHERE CART_CODE IN
+        <foreach collection="cartCodeList" item="cartCode" separator="," open="(" close=")">
+            #{cartCode}
+        </foreach>

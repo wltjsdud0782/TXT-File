@@ -1,0 +1,4 @@
+조인/서브쿼리 사용 후 자바로 데이터 가져오기
+1. resultMap 에 조회하는 컬럼명 직접 삽입
+2. resultMap 에 관계성( 1:1 or 1:N )따라 association 혹은 collection 사용
+3. DB 에서 view 사용
