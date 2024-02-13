@@ -36,3 +36,9 @@ ALTER TABLE 테이블명 ADD COLUMN 변수명 자료형;
 
 - CREATE OR REPLACE VIEW 테이블명_VIEW AS SELECT 조회할변수명 FROM 테이블명 [WHERE 변수명 = 조건값];
 	: VIEW 테이블 생성
+
+- STR_TO_DATE ('문자열', ) : 문자열 → 날짜 자료형 변경
+- DATE_FORMAT (DATETIME 자료형을 가진 변수명, '%Y-%m-%d') : 날짜 → 문자열 자료형 변경
+						▲ 년-월-일
+						%Y-%m-%d %h:%i:%s : 년-월-일 시:분:초
+						%Y.%m.%d %h:%i:%s : 년.월.일 시:분:초
