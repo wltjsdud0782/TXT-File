@@ -20,6 +20,9 @@ UPDATE 테이블명 SET 변수명 = 변경값 [WHERE 변수명 = 조건값];
 ⑤ 삭제
 DELETE FROM 테이블명 [WHERE 변수명 = 조건값];
 
+⑥ 테이블에 컬럼 추가
+ALTER TABLE 테이블명 ADD COLUMN 변수명 자료형;
+
 ※ 이외의 추가 문법 ※
 - INNER JOIN 테이블명2 ON 테이블명1.동일변수명 = 테이블명2.동일변수명
 	: 테이블 엮기
