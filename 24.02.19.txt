@@ -6,4 +6,16 @@ html + css + javascript
 
 리액트 개발 세팅
 - node.js ( javascript 확장버전 )
+- node.js 를 설치하면 npm, npx 라는 명령어를 터미널로 통해 사용할 수 있다.
 
+
+- 리액트 프로젝트를 생성할 폴더에서
+	터미널을 열고 npm install -g create-react-app 명령어를 실행한다.
+	: create-react-app 명령어를 pc에 설치한다. (최초실행 한 번)
+
+- 리액트 프로젝트 생성
+	터미널에 npx create-react-app 프로젝트명	명령어를 실행한다.
+- 생성한 프로젝트 실행
+	터미널에 npm start 명령어를 실행한다.
+- 생성한 프로젝트 중지
+	터미널에 ctrl+c 를 누르고 y/n 선택하여 입력한다.
