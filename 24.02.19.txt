@@ -1,0 +1,9 @@
+SPA (Single Page Application)
+
+react : 프론트엔드 프레임워크
+
+html + css + javascript
+
+리액트 개발 세팅
+- node.js ( javascript 확장버전 )
+
