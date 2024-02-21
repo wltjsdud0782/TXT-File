@@ -1,0 +1,38 @@
+Git 설치 후 최초 한 번만 실행하는 명령어 ( PC마다 한 번씩 )
+
+파일 탐색기 아무곳이나 마우스 우측 클릭 후 open git bash here 선택
+
+★ 컴퓨터에 git 사용자를 지정
+	git config --global user.name
+	git config --global user.email
+	수정 : git config --global user.name wltjsdud0782
+	        git config --global user.email wltjsdud0782@gmail.com
+	확인 후 지정 필수
+
+- 최초 파일을 깃허브에 올리는 방법
+(1) GitHub 사이트 로그인 후 원격 저장소(remote repository)를 생성한다.
+(2) GitHub 사이트에 올릴 파일이 있는 폴더에서 open git bash here 실행.
+(3) 현재 폴더를 git과 연결 시켜주는 명령어 실행.
+	> git init
+	실행 후 폴더에 .git 이라는 숨김 폴더가 생성됐는지 확인.
+
+(4) 확인 후 다른 명령어 실행.
+	> git branch -M main
+
+(5) 1번에서 만든 원격저장소와 3번에서 만든 지역저장소를 연결시켜준다.
+	> git remote add origin (원격저장소url)
+				ㄴex) https://github.com/wltjsdud0782/test1.git
+
+(6) 지역저장소에서 원격저장소로 올릴 파일을 스테이징한다.
+	> git add (올릴파일명)
+	> git add .
+	   ㄴ 지역저장소에 있는 모든 파일을 스테이징
+
+(7) 스테이징한 파일들을 원격저장소로 올린다.
+	7-1. 커밋(Commit) : 되돌아 갈 수 있는 복원 시점 생성
+		> git commit -m "커밋 메시지"
+				ㄴex) "최초 파일 업로드"
+
+	7-2. 푸쉬(Push) : 원격저장소에 파일 전송
+		> git push origin main (4번의 브렌치명이다.)
+
