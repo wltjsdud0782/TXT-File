@@ -1,0 +1,23 @@
+Git 팀플 branch 참고 명령어
+브랜치 > 게임 pbe 서버 개념
+
+현재 branch 위치 확인
+	> git branch
+
+branch 생성
+	> git branch (새로운 브랜치명)
+
+branch 이동
+	> git checkout (이동할 브랜치명)
+
+다른 branch의 내용을 합치기
+★main에서★ (main에 합치고 싶다면)
+	> git merge (병합할 브랜치명)
+
+ㅁ	-	ㅁ	-	ㅁ	-	ㅁ
+main		dev		받은dev		조원1 dev
+
+
+main 브랜치 올리기
+dev 브랜치 바로 올리기
+조원은 dev 브랜치만 받기
