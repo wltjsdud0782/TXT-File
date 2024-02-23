@@ -1,0 +1,45 @@
+기능별 필요 Table 과 Column 명 정리
+
+- 회원 정보 테이블
+테이블명 : STUDYROOM_MEMBER
+컬럼 :
+	MEMBER_CODE : PK
+	MEMBER_ID : 아이디
+	MEMBER_PW : 비밀번호
+	MEMBER_NAME : 이름
+	MEMBER_TEL : 연락처
+	MEMBER_AGE : 나이
+	MEMBER_ADDR : 주소
+	ADDR_DETAIL : 상세주소
+	MEMBER_GENDER : 성별
+	IS_ADMIN : 관리자? 부관리자? 일반?
+
+- 좌석 정보 테이블
+테이블명 : STUDYROOM_SEAT
+컬럼 :
+	SEAT_NUM : PK
+	SEAT_STATUS : 좌석 상태
+	SEAT_POWER : 전기 공급
+	SEAT_FLOOR : 층
+	MEMBER_CODE : 외래키
+
+- 관리자 정보 테이블
+테이블명 : STUDYROOM_ADMIN
+컬럼 :
+	ADMIN_CODE : PK
+	ADMIN_
+
+
+- 매장 정보 테이블
+테이블명 : STUDYROOM_PAGE
+컬럼 : 
+	PAGE_
+
+	> 게시판 테이블
+	테이블명 : STUDYROOM_BOARD
+	컬럼 :
+		BOARD_CODE : PK
+		BOARD_TITLE : 제목
+		BOARD_DATE : 글작성시간
+		BOARD_WRITER : 작성자
+		BOARD_CONTENT : 글내용
