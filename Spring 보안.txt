@@ -1,0 +1,10 @@
+Spring Security (basicboard security파일)
+(lambda)
+- 인증 및 인가를 관리하는 라이브러리
+- 인증 (Authentication) : 신분 확인 > 로그인
+- 인가 / 권한 (Authorization) : > 관리자
+
+1. spring 프로젝트 생성시 security를 사용하겠다는 dependency 추가. > (spring security)
+2. 라이브러리 추가하면 인증/인가에 대해 프로세스 자동 실행된다.
+3. 기본 프로세스는 무조건 인증/인가를 받아야 되게끔 설계 되어 있다.
+4. 기본 인증 프로세스를 사용하지 않고, 프로젝트에 맞게 인증/인가에 대해 프로세스 구현 필요.
