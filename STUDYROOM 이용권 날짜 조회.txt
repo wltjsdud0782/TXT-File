@@ -1,0 +1,41 @@
+회원 개인이 로그인해서
+입실하기를 눌렀을때
+로그인 한 회원이 가지고 있는 이용권의 남은 날짜를 띄워줘야함.
+
+
+이용권 구매일 = 결제일 (APPROVAL_DATE)
+이용권 시작 날짜 = 결제일
+이용권 끝나는 날짜 = 결제일 + 이용권별 사용가능 날짜 (CHARGE_DATE)
+이용권 남은 날짜 = 끝나는 날짜 - 오늘 날짜 (컬럼x 필요x) REMAIN_DATE
+
+	SELECT IF(ENDDATE > NOW() , (ENDDATE.DAY - NOW.DAY)일남음,이용권끝남)
+
+이용권 차감 = 결제일로부터 다음날 -> 하루차감
+
+이용권 만료 = 이용권 끝나는 날짜
+
+
+3일권이면
+13일에 결제하면
+15일까지 사용가능
+16일 사용불가능 ( 만료 )
+
+(로그인 한 회원의 멤버 코드를 가지고 있는)결제 코드 > 차지 코드 > 차지데이트
+대충 USER 회원의 멤버 코드 = 6
+
+결제 코드 안 멤버 코드 차지 코드
+차지 코드 안 차지 데이트
+
+셀렉 결제코드 웨얼 멤버코드
+
+셀렉 차지코드 셀렉 결제코드 웨얼 멤버코드
+
+셀렉 차지데이트 웨얼 차지코드 셀렉 결제코드 웨얼 멤버코드
+
+SELECT CHARGE_DATE
+FROM STUDYROOM_CHARGE CHARGE
+INNER JOIN APPROVAL APP
+ON APP.CHARGE_CODE = CHARGE.CHARGE_CODE
+WHERE
+APPROVAL_CODE = (SELECT APPROVAL_CODE FROM APPROVAL WHERE MEMBER_CODE = 6);
+
