@@ -1,0 +1,37 @@
+Spring 의 어노테이션 @@@@@@@@@@@@@@@@@
+
+- 객체 생성 어노테이션
+@Controller
+
+@Service("")
+
+@Configuration
+
+@Override
+	: 부모 클래스에서 정의된 메소드를 자식 클래스에서 재정의 하는 것
+
+@Component
+	: 큰 역할이 없는 클래스의 객체 생성 (모든 어노테이션의 부모 : 만능)
+
+@Repository
+	: JPA 사용 시 많이 사용함.
+
+
+- 객체 호출 어노테이션 (의존성 주입)
+
+@Resource(name="")
+	: 만들어진 객체의 이름값을 통해 의존성 주입
+	@Component class A {}	/	@Component class B extends A{}
+		@Resource(name="a") (변수명이 a인 객체를 가져온다.)
+		   private A a;
+
+@Autowired
+	: 만들어진 객체와 의존성 주입 대상 객체의 자료형을 선택하여 의존성 주입
+	@Component class A {}
+		@Autowired
+		   private ※ A ※ a; (클래스 A 객체 가져온다.)
+	- 한계점
+	@Component class A {}	/	@Component class B extends A{}
+		@Autowired
+		   private A a; (오류)
+			: 의존성 주입 대상 객체가 2개 이상이면 오류 발생		
