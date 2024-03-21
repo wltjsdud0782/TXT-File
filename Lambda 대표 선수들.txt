@@ -1,0 +1,18 @@
+Lambda
+대표 선수
+
+Predicate<T>
+	▶ boolean test(T t)
+	: 전달 인자를 근거로 참 또는 거짓 반환
+
+Supplier<T>
+	▶ T get()
+	: 메소드 호출 시 무엇인가?를 제공
+
+Consumer<T>
+	▶ void accept (T t)
+	: 무엇인가?를 받아 들이기만 함
+
+Function<T, R>
+	▶ R apply(T t)
+	: 입출력 출력이 있음 (수학적으론 함수)
